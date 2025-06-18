@@ -1,15 +1,15 @@
-import { useState } from "react";
+//import { useState } from "react";
 import styles from "./Experiences.module.css";
-import { ExperienceCard } from "../components/experiences/ExperienceCard";
+//import { ExperienceCard } from "../components/experiences/ExperienceCard";
 import { CxOption, CxSelect } from "@computas/designsystem/select/react";
 
 import { experienceTypeMap } from "../types/experienceTypes";
 import { useExperiences } from "../hooks/useExperiences";
 
 export default function Experiences() {
-  const [selectedExperience, setSelectedExperience] = useState<string | null>(
+  /*const [selectedExperience, setSelectedExperience] = useState<string | null>(
     null
-  );
+  );*/
 
   // TODO Oppgave 1.1 of 1.2: Håndter loading og error av erfaringer
   const { data: experiences } = useExperiences();
@@ -25,7 +25,7 @@ export default function Experiences() {
     // TODO Oppgave 5.1: Filtrer experiences etter type
   };
 
-  const filteredExperiences = () => {
+  /*const filteredExperiences = () => {
     const validTypes = Object.keys(experienceTypeMap).filter(
       (type) => type !== "other"
     );
@@ -41,7 +41,7 @@ export default function Experiences() {
       );
     }
     return experiences;
-  };
+  };*/
 
   return (
     <div className={styles.container}>
